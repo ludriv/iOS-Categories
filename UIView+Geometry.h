@@ -23,4 +23,7 @@
 
 - (void)adaptInRect:(CGRect)rect;
 
+- (void)alignOnBottomOfFrame:(CGRect)refFrame spacingWith:(CGFloat)spaceSize;
+- (void)alignOnRightOfFrame:(CGRect)refFrame spacingWith:(CGFloat)spaceSize;
+
 @end

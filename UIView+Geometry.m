@@ -97,5 +97,14 @@
 	[self setCenter:CGPointMake(rect.origin.x + rect.size.width / 2, rect.origin.y + rect.size.height / 2)];
 }
 
+- (void)alignOnBottomOfFrame:(CGRect)refFrame spacingWith:(CGFloat)spaceSize
+{
+	[self setFrame:CGRectMake(refFrame.origin.x, CGRectGetMaxY(refFrame) + spaceSize, refFrame.size.width, refFrame.size.height)];
+}
+
+- (void)alignOnRightOfFrame:(CGRect)refFrame spacingWith:(CGFloat)spaceSize
+{
+	[self setFrame:CGRectMake(CGRectGetMaxX(refFrame) + spaceSize, refFrame.origin.y, refFrame.size.width, refFrame.size.height)];
+}
 
 @end
